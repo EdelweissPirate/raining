@@ -6,7 +6,7 @@ const projects = [
         caption: 'Room example from 3DShowroom site.',
         url: 'https://shoppingconcept.web.app/',
         repo: 'https://github.com/EdelweissPirate/shopping-room-concept',
-        image: 'src/assets/room.jpg'//'https://via.placeholder.com/500'
+        image: './room.jpg'//'https://via.placeholder.com/500'
     },
     {
         name: 'Shopping Site',
@@ -15,7 +15,7 @@ const projects = [
         caption: 'The cubes react to the users mouse input.',
         url: 'https://shoppingboxes-50bf7.web.app/',
         repo: 'https://github.com/EdelweissPirate/shopping-boxes',
-        image: 'src/assets/boxes.jpg' //'https://via.placeholder.com/500'
+        image: './boxes.jpg' //'https://via.placeholder.com/500'
     }
 ]
 

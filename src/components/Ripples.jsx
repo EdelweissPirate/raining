@@ -4,7 +4,7 @@ import { useRef } from "react"
 
 function Ripple() {
     const ref = useRef()
-    const texture = useTexture('src/assets/ripple.png')
+    const texture = useTexture('./ripple.png')
 
     let [x, y, z] = [
         Math.random() * 25 - 12.5,
