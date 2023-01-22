@@ -35,15 +35,15 @@ function Titles() {
 
     return (
         <group>
-            <Text fillOpacity={0} font={'./Oldenburg-Regular.ttf'} ref={textMesh1} position={[-1, 0.151, 0]} rotation={[270*Math.PI/180, 0, 90*Math.PI/180]}  fontSize={.95}>
+            <Text fillOpacity={0} font={'./fonts/Oldenburg-Regular.ttf'} ref={textMesh1} position={[-1, 0.151, 0]} rotation={[270*Math.PI/180, 0, 90*Math.PI/180]}  fontSize={.95}>
                 Joshua Evans
             </Text>
 
-            <Text fillOpacity={0} font={'./JacquesFrancois-Regular.ttf'} ref={textMesh2} position={[0, 0.151, 0]} rotation={[270*Math.PI/180, 0, 90*Math.PI/180]}  fontSize={.6}>
+            <Text fillOpacity={0} font={'./fonts/JacquesFrancois-Regular.ttf'} ref={textMesh2} position={[0, 0.151, 0]} rotation={[270*Math.PI/180, 0, 90*Math.PI/180]}  fontSize={.6}>
                 Web Development
             </Text>
 
-            <Text fillOpacity={0} font={'./Yellowtail-Regular.ttf'} ref={textMesh3} position={[1, 0.151, 0]} rotation={[270*Math.PI/180, 0, 90*Math.PI/180]}  fontSize={.4}>
+            <Text fillOpacity={0} font={'./fonts/Yellowtail-Regular.ttf'} ref={textMesh3} position={[1, 0.151, 0]} rotation={[270*Math.PI/180, 0, 90*Math.PI/180]}  fontSize={.4}>
                 React - ThreeJS - Electron
             </Text>
         </group>

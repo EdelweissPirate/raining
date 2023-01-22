@@ -74,7 +74,7 @@ function Scene() {
                     <Environment  near={1} far={85} resolution={256} map={texture} />
                     <fog attach="fog" color="#222222" args={['#202020', 5, window.innerWidth >= 550 ? 30 : 45]} />
 
-                    <OrbitControls />
+                    {/* <OrbitControls /> */}
                     <ambientLight intensity={0.03} />
 
                     <SceneContent />

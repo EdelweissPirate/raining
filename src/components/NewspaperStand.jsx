@@ -22,9 +22,8 @@ function NewspaperStand() {
     return (
         <>
             <NewspaperVending 
-                scale={0.09}
-                args={[2, 1, 0.5]} 
-                position={[2, 0.5, -4]} 
+                scale={0.07}
+                position={[1.8, 0.5, -4]} 
                 onClick={e => handleClick(e)} 
                 onPointerOver={() => setHovered(true)}
                 onPointerOut={() => setHovered(false)}    
