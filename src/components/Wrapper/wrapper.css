@@ -1,0 +1,16 @@
+.wrapper {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* min-height: min-content; */
+}
+
+.wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.wrapper-inner {
+    padding: 1rem 0;
+}

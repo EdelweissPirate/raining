@@ -1,0 +1,235 @@
+@font-face {
+  font-family: Oldenburg;
+  src: url('./assets/Oldenburg-Regular.ttf');
+}
+
+@font-face {
+  font-family: JacquesFrancois;
+  src: url('./assets/JacquesFrancois-Regular.ttf');
+}
+
+:root {
+  font-family: JacquesFrancois, Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #f1eee5;
+  --offwhite: f1eee5;
+  /* color: rgba(255, 255, 255, 0.87); */
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  min-width: 320px;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden !important;
+}
+
+section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top:0;
+  left: 0;
+}
+
+h1 {
+  font-family: Oldenburg,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 3.2rem;
+  line-height: 1.1;
+}
+
+h2, 
+h3 {
+  line-height: 1.1;
+  font-family: JacquesFrancois,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h4, 
+h5 {
+  line-height: 1.1;
+  font-family: Yellowtail,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: inherit;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+#scene {
+  z-index: 0;
+}
+
+#newspaper {
+  transform: translate(0, 100%);
+}
+
+.container {
+  width: 80%;
+  left: 12.5%
+}
+
+.btn-small {
+  padding: 0 .25rem;
+  transition: .25s linear all;
+}
+
+.btn-small:hover {
+  scale: 1.2
+}
+
+.click-z {
+  z-index: 997;
+}
+
+.hidden {
+  display: none;
+}
+
+.w-80 {
+  width: 80%
+}
+
+.w-90 {
+  width: 90%
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.py-1 {
+  padding: 1rem 0rem;
+}
+
+.py-2 {
+  padding: 2rem 0rem;
+}
+
+.w-fill {
+  width: 100%
+}
+
+.h-fill {
+  height: 100%
+}
+
+.my-1 {
+  margin: 1rem 0
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.flex-centre {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.no-mouse {
+  user-select: none;
+}
+
+.text-xxl {
+  font-size: xx-large;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 100%;
+    left: 0%
+  }
+}

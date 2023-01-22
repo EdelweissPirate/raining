@@ -1,0 +1,98 @@
+/* Anim classes */
+.fade-in {
+    opacity: 0;
+    animation: fade-in 1s linear forwards;
+}
+
+.fade-out {
+    opacity: 1;
+    animation: fade-out 1s linear forwards;
+}
+
+.slide-in {
+    transform: translate(-100%, 0);
+    animation: slide-in 1s ease-in-out forwards;
+}
+
+.slide-out {
+    transform: translate(0, 0);
+    animation: slide-out 1s ease-in-out forwards;
+}
+
+.slide-down {
+    transform: translate(0, 0);
+    animation: slide-down 1s ease-in-out forwards;
+}
+
+.slide-up {
+    transform: translate(0, 100%);
+    animation: slide-up 1s ease-in-out forwards;
+}
+
+.anim-marquee {
+    animation: scroll-marquee 30s infinite linear;
+}
+
+/* Keyframes */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translate(-100%, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-100%, 0);
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, 100%);
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translate(0, 100%);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes scroll-marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}

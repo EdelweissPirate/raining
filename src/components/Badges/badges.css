@@ -1,0 +1,14 @@
+.badges {
+    width: 100%;
+    display: flex;
+    flex-direction: row !important; 
+    justify-content: space-around;
+    container-type: inline-size;
+}
+
+.badges[data-type='card'] {
+    width: 80%;
+    display: flex;
+    flex-direction: row !important; 
+    justify-content: space-around;
+}
