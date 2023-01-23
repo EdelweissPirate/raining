@@ -14,13 +14,13 @@ function Raindrop() {
     useFrame(() => {
         const drop = ref.current
         
-        if(!drop.velocity) drop.velocity = 0
+        if(!drop.velocity) drop.velocity = Math.random()
 
         drop.velocity -= 3 * Math.random() * 1;
         drop.position.y += drop.velocity;
 
-        if(drop.position.y < -100){
-            drop.position.y = 100;
+        if(drop.position.y < -20){
+            drop.position.y = 50 + (50*Math.random());
             drop.velocity = 0;
         }
     })
@@ -38,7 +38,7 @@ function Raindrop() {
     )
 }
 
-function Rain({ count }) {
+function Rain({ count = 1000 }) {
     const genDrops = () => {
         const drops = Array(count).fill(0).map((item, i) => {
             return <Raindrop  key={`raindrop-${i}`} />

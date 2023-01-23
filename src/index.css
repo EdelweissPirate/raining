@@ -16,7 +16,7 @@
 
   color-scheme: light dark;
   color: #f1eee5;
-  --offwhite: f1eee5;
+  --offwhite: #f1eee5;
   /* color: rgba(255, 255, 255, 0.87); */
   background-color: #242424;
 
@@ -137,6 +137,20 @@ ul {
   scale: 1.2
 }
 
+.btn-audio {
+  margin: 2rem 1rem;
+  padding: 1rem;
+  width: 100px;
+  font-family: Oldenburg,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: 1px solid var(--offwhite);
+  transition: .5s linear;
+}
+
+.btn-audio:hover {
+  background-color: var(--offwhite);
+  color: #222222;
+}
+
 .click-z {
   z-index: 997;
 }
@@ -163,6 +177,14 @@ ul {
 
 .py-2 {
   padding: 2rem 0rem;
+}
+
+.w-100 {
+  width: 100vw
+}
+
+.h-100 {
+  height: 100vh
 }
 
 .w-fill {

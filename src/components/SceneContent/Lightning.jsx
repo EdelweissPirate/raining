@@ -12,14 +12,14 @@ function Lightning() {
                 flash.position.set(
                     0, //Math.random()*400,
                     300+Math.random()*200,
-                    0, //100
+                    100
                 );
             }
 
             flash.power = 50 + Math.random() * 900;
         }
     })
-    // #062d89
+
     return (
         <>
             <pointLight

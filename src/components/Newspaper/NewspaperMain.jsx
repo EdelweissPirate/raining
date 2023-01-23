@@ -64,7 +64,7 @@ function NewspaperMain() {
                                         </button>
                                     </li>
                                     <li>
-                                        <button className="btn-small" onClick={e => handleClose(e)}>
+                                        <button id={'newspaper-close'} className="btn-small" onClick={e => handleClose(e)}>
                                             close
                                         </button>
                                     </li>

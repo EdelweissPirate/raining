@@ -1,10 +1,9 @@
-import { Box } from "@react-three/drei"
 import { useFrame } from "@react-three/fiber"
-import { useRef, useState } from "react"
+import { useState } from "react"
 
-import NewspaperVending from "./NewspaperVending"
+import NewspaperStand_Model from "./NewspaperStand_Model"
 
-function NewspaperStand() {
+function NewspaperStand({ newspaperActive }) {
     const [hovered, setHovered] = useState(false)
 
     useFrame(() => {
@@ -15,21 +14,25 @@ function NewspaperStand() {
     const handleClick = () => {
         const newspaper = document.querySelector('#newspaper')
 
-        newspaper.classList.remove('slide-down')
-        newspaper.classList.add('slide-up')
+        setTimeout(() => {
+            newspaper.classList.remove('slide-down')
+            newspaper.classList.add('slide-up')
+        }, 3000)
+
+        newspaperActive(true)
     }
 
     return (
         <>
-            <NewspaperVending 
+            <NewspaperStand_Model 
                 scale={0.07}
-                position={[1.8, 0.5, -4]} 
+                position={[1.8, 0.2, -4]} 
                 onClick={e => handleClick(e)} 
                 onPointerOver={() => setHovered(true)}
                 onPointerOut={() => setHovered(false)}    
             >
                 <meshPhongMaterial color={'#e7e7e7'} />
-            </NewspaperVending>
+            </NewspaperStand_Model>
         </>
     )
 }

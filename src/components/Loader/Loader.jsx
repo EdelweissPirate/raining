@@ -20,7 +20,7 @@ function Loader() {
 
     const styleProgressBarOuter = {
         backgroundColor: '#666', 
-        width: window.innerWidth >= 550 ? '40%' : '75%',
+        width: window.innerWidth >= 550 ? '40%' : '70%',
         margin: 'auto'
     }
 

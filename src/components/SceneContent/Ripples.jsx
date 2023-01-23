@@ -1,10 +1,9 @@
-import { Plane, useTexture } from "@react-three/drei"
+import { useTexture, Instance, Instances } from "@react-three/drei"
 import { useFrame } from "@react-three/fiber"
-import { useRef } from "react"
+import { useMemo, useRef } from "react"
 
 function Ripple() {
     const ref = useRef()
-    const texture = useTexture('./images/ripple.png')
 
     let [x, y, z] = [
         Math.random() * 25 - 12.5,
@@ -25,9 +24,10 @@ function Ripple() {
             ]
     
             rip.position.x = x
+            rip.position.y = 0.11
             rip.position.z = z
 
-            rip.scale.x = rip.scale.y = rip.scale.z = 1// 0.8 + 0.3 * Math.random()
+            rip.scale.x = rip.scale.y = rip.scale.z = 1 //0.8 + 0.3 * Math.random()
 
             if(rip.position.x <= 0 && rip.position.x >= -2.1){
                 if(rip.position.z <= -3 && rip.position.z >= -4){
@@ -38,26 +38,36 @@ function Ripple() {
     })
 
     return (
-        <Plane ref={ref} args={[.5, .5]} position={[x, 0.15, z]} rotation={[-90*Math.PI/180,0,0]}>
-            <meshStandardMaterial map={texture} attach="material" transparent />
-        </Plane>
+        <group position={[0,0,0]}>
+            <Instance ref={ref} scale={Math.random()} position={[x, 0.11, z]} rotation={[-90*Math.PI/180,0,0]} matrixAutoUpdate={true} onUpdate={(self) => self.updateMatrix()}  />
+        </group>
     )
 }
 
 function Ripples({ count = 1000 }) {
     const genRipples = () => {
         const rips = Array(count).fill(0).map((item, i) => {
-            return <Ripple key={`ripple-${i}`} />
+            return (
+                <Ripple key={`ripple-${i}`} />
+            )
         })
 
         return [...rips]
     }
 
 
-    const _ripples = genRipples(count)
+    const _ripples = useMemo(() => genRipples(count), [count])
+    const texture = useTexture('./images/ripple.png')
     
     return (
-        _ripples
+        <Instances
+            limit={count}
+            range={count}
+        >
+            <planeGeometry args={[.5, .5]} />
+            <meshStandardMaterial map={texture} attach="material" transparent />
+            {_ripples}
+        </Instances> 
     )
 }
 
