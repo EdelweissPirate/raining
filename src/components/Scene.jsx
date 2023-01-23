@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import { Environment, OrbitControls } from "@react-three/drei"
 import { Canvas, useLoader } from "@react-three/fiber"
-import { Suspense, useState } from "react"
+import { Suspense, useEffect, useState } from "react"
 import { RGBELoader } from 'three-stdlib'
 import { EffectComposer, Noise, Bloom } from '@react-three/postprocessing'
 
@@ -21,6 +21,13 @@ function Scene() {
             setAudio(arg)
         }, 1000)
     }
+
+    useEffect(() => {
+        if(window.innerWidth < 800){
+            setAudio(false)
+        }
+    }, [])
+    
 
     const glConfig = {
         powerPreference: "high-performance",
@@ -48,12 +55,12 @@ function Scene() {
             <Suspense fallback={<Loader />}>
                 <Canvas gl={glConfig} camera={camConfig} shadows dpr={[1, 2]}>
                     
-                    <OrbitControls />
+                    {/* <OrbitControls /> */}
 
                     <Environment  near={1} far={85} resolution={256} map={texture} />
                     <fog attach="fog" color="#222222" args={['#202020', 5, window.innerWidth >= 550 ? 30 : 45]} />
 
-                    <ambientLight intensity={0.3} />
+                    <ambientLight intensity={0.03} />
 
                     <SceneContent audio={audio} />
 

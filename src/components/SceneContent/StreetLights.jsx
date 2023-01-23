@@ -3,7 +3,7 @@ import { useDepthBuffer } from "@react-three/drei"
 import StreetLight from "./StreetLight"
 
 function StreetLights() {
-    const depthBuffer = useDepthBuffer({ frames: 1 })
+    const depthBuffer = null //useDepthBuffer({ frames: 1 })
 
     return (
         <>
