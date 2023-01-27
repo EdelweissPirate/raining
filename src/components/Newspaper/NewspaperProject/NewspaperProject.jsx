@@ -1,13 +1,15 @@
-import Badges from "../Badges/Badges"
+import Badges from "../../Badges/Badges"
 
-function NewspaperArticle({ inverted, data }) {
+import './newspaperProject.css'
+
+function NewspaperProject({ inverted, data }) {
     const { name, tech, description, caption, url, repo, image } = data
 
     return (
         <a href={url} target='_blank'>
-            <div className={`grid article-grid ${inverted && 'article-grid-inverted'}`}>
+            <div className={`grid project-grid ${inverted && 'project-grid-inverted'}`}>
             
-                <div className="article-image flex flex-center">
+                <div className="project-image flex flex-center">
                     <figure>
                         <img src={image} />
                         <figcaption style={{fontSize: '0.8rem'}}>
@@ -16,11 +18,11 @@ function NewspaperArticle({ inverted, data }) {
                     </figure>
                 </div>
 
-                <div className="article-title flex flex-centre">
+                <div className="project-title flex flex-centre">
                     <h3>{name}</h3>
                 </div>
 
-                <div className="article-subtitle flex flex-center">
+                <div className="project-subtitle flex flex-center">
                     <Badges 
                         solidity={tech.includes('solidity')}
                         react={tech.includes('react')}
@@ -32,7 +34,7 @@ function NewspaperArticle({ inverted, data }) {
                     />
                 </div>
 
-                <div className="article-description">
+                <div className="project-description">
                     <p>{description}</p>
                 </div>
 
@@ -41,4 +43,4 @@ function NewspaperArticle({ inverted, data }) {
     )
 }
 
-export default NewspaperArticle
+export default NewspaperProject

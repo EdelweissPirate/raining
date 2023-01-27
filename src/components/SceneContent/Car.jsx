@@ -93,6 +93,6 @@ function Car(props) {
   )
 }
 
-// useGLTF.preload('/models/car-transformed.glb')
+useGLTF.preload('/models/car-transformed.glb')
 
 export default Car

@@ -6,7 +6,7 @@ function App() {
 
   return (
     <main>
-      {/* <Stats /> */}
+      <Stats />
       <Scene />
       <NewspaperMain />
     </main>

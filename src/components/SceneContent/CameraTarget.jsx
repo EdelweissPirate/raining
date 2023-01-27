@@ -19,8 +19,6 @@ function CameraTarget({ currentPos }) {
     const targetVec = new THREE.Vector3(...camPos.home)
 
     useFrame(({ camera }) => {
-        // console.log(camera.position);
-
         switch (currentPos) {
             case null:
                 targetVec.set(...targetPos.home)
